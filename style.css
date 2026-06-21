@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rr-blue: #122E6E;       /* Rajasthan Royals deep royal blue */
+    --rr-blue-dark: #0B1E4D;  /* darker navy for footer */
+    --rr-pink: #E6168B;       /* RR signature pink — buttons, accents, borders */
+    --rr-pink-dark: #B80E6E;  /* deep pink for gradients */
+    --rr-gold: #F4C430;       /* gold trophy accent */
+    --off-white: #F9FAF8;     /* high-contrast headings */
+    --soft-pink: #FBEAF3;     /* quote background */
+    --muted: #6B6470;         /* secondary card text */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--rr-blue);
+    line-height: 1.4;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background: linear-gradient(120deg, var(--rr-blue) 0%, var(--rr-blue) 45%, var(--rr-pink-dark) 100%);
+    color: var(--off-white);
+    padding: 24px 14% 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--off-white);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--soft-pink);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: var(--rr-gold);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--off-white);
+    margin-bottom: 8px;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: var(--soft-pink);
+    margin-bottom: 16px;
+}
+
+.btn-primary {
+    background-color: var(--rr-pink);
+    color: var(--off-white);
+    border: none;
+    padding: 8px 34px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--rr-pink-dark);
+}
+
+.hero-right {
+    flex: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    border: 3px solid var(--rr-gold);
+    display: block;
+}
+
+/* ---------- Information / Cards ---------- */
+.info {
+    padding: 56px 14% 100px;
+    text-align: center;
+}
+
+.info-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--rr-blue);
+    margin-bottom: 56px;
+    position: relative;
+}
+
+.info-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--rr-gold);
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 170px;
+    text-align: center;
+}
+
+.card-illustration {
+    width: 100%;
+    border: 4px solid var(--rr-pink);
+    height: 160px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.card-text {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.card-text strong {
+    color: var(--rr-pink);
+}
+
+/* ---------- Quote ---------- */
+.quote-section {
+    background-color: var(--soft-pink);
+    padding: 100px 22%;
+    border-left: 8px solid var(--rr-pink);
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--rr-blue);
+    line-height: 1.3;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--rr-pink);
+    margin-top: 4px;
+}
+
+/* ---------- Call to action ---------- */
+.cta-section {
+    padding: 100px 14%;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-banner {
+    background: linear-gradient(120deg, var(--rr-pink) 0%, var(--rr-pink-dark) 100%);
+    width: 100%;
+    border-radius: 8px;
+    padding: 44px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--off-white);
+    gap: 40px;
+}
+
+.cta-text h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: var(--soft-pink);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    padding: 8px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: var(--rr-blue-dark);
+    color: var(--soft-pink);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 4px solid var(--rr-gold);
+}
